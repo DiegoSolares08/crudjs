@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootswatch-->
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <!--CSS-->
+    <link rel="stylesheet" href="App.css">
+
+    <title>CRUD</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"> Productos </a>
+    </nav>
+    <!--Navegación-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"> Productos App </a>
+    </nav>
+    <br>
+    <br>
+<center>
+    <div class="contenedor">
+        <!--Aplicación-->
+        <div class="columna medida_columna">
+            <!--Formulario-->
+            <div class="medida-1">
+                <div class="tarjeta">
+                    <div class="tarjeta-header">
+                        <h4><b> Agregar Producto </b></h4>
+                        <br>
+                        <br>
+                        <form id="producto-formulario" class="tarjeta-body">
+                            <div class="grupo-formulario">
+                                <input type="text" id="nombre" placeholder="Nombre del producto" class="control-formulario">
+                            </div>
+                            <br>
+                            <div class="grupo-formulario">
+                                <input type="number" id="precio" step="0.01" placeholder="Precio del producto" class="control-formulario">
+                            </div>
+                            <br>
+                            <div class="grupo-formulario">
+                                <input type="number" id="año" step="1" value="2022" class="control-formulario">
+                            </div>
+                            <br>
+                            <input type="submit" value="Guardar" class="btn btn-primario btn-bloque">
+
+                        </form>
+                    </div>
+                </div>
+
+                <!--Lista de productos-->
+                <div id="producto-lista" class="medida-3">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
+    <script src="App.js"></script>
+
+</body>
+</html>
+
