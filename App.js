@@ -12,7 +12,7 @@ const nombre = document.getElementById("nombre").value,
       año = document.getElementById("año").value;
 
 //Crear un nuevo objeto (Producto)
-const producto = new Product (nombre,precio,año);
+const producto = new Producto (nombre,precio,año);
 
 //Crear un nuevo usuario de interfaz
 const ui = new UI();
@@ -24,7 +24,6 @@ if(nombre==="" || precio==="" || año===""){
 
 //Guardar producto
 ui.addProducto(producto);
-ui.showMessage("Producto agregado");
 ui.resetForm();
 });
 
@@ -51,46 +50,55 @@ class UI{
         const productoLista = document.getElementById("producto-lista");
         const elemento = document.createElement("div");
         elemento.innerHTML = ` 
-        <div class="tarjeta texto margen4">
+        <div class="alert alert-dismissible alert-danger">
             <div class="tarjeta-body">
-                <strong>Producto</strong> : ${producto.nombre}-
-                <strong>Precio</strong> : ${producto.precio}-
-                <strong>Año</strong> : ${producto.año}-
-                <a href="#" class="btn btn-error" name="eliminar"></a>
+                <strong> Producto </strong> : ${producto.nombre} - 
+                <strong> Precio </strong> : ${producto.precio} - 
+                <strong> Año </strong> : ${producto.año} - 
+                <a href="#" class="btn btn-alert" name="eliminar">Eliminar</a>
             </div>
         </div>
         `; // Comillas con ALt+96
         
         productoLista.appendChild(elemento); //appendChild -> Subobjeto/objeto hijo
     }
-        //resetear valores del formulario
-        resetForm(elemento){
-            document.getElementById("producto-formulario").reset();
-        }
 
-        deleteProducto(elemento){
-            if(elemento.nombre === "eliminar"){
-                element.parentElement.parentElement.remove();
-                this.showMessage("El producto se a eliminad")
-            }
-        }
-        showMessage(mensaje, cssClass){
-            const div= document.createElement("div");
-            div.className = `alert alert-${cssClass}`;
-            div.appendChild(document.createTextNode(mensaje));
-
-            //Mostrar en el DOM
-            const contenido = docu.querySelector(".container");
-            const app = docu.querySelector("#App");
-
-            //Insertar mensaje en el interfaz del usuario
-            container.insertBefore(div, app);
-
-            //Remover el mensaje luego de 3 segundos
-            setTimeout(function(){
-                document.querySelector(".alert").remove();
-            }, 3000);
-        }
-    
+//resetear datos de formulario
+resetForm()
+{
+document.getElementById("producto-formulario").reset();
 }
 
+deleteProducto(elemento)
+{
+    if(elemento.nombre === "eliminar")
+    {
+        this.showMessage("El Producto se ha Eliminado");
+        elemento.parentElement.parentElement.remove();
+       
+    }
+}
+
+showMessage(mensaje, cssClass)
+{
+  const div = document.createElement("div");
+  div.className = `alert alert-${cssClass}`;
+  div.appendChild(document.createTextNode(mensaje));
+
+
+
+//Mostrar en el DOM
+const contenido = document.querySelector(".container")
+const app = document.querySelector("#App")
+    //Insertar mensaje en el interfaz usuario
+    container.insertBefore(div, app);
+
+    //Remover el mensaje luego de tres segundos
+
+    setTimeout(function ()
+    {
+        document.querySelector(".alert").remove();
+    }, 3000);
+
+}
+}
