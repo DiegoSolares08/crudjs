@@ -18,14 +18,26 @@ input{
     width: 350px;
     padding: 5px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 6px 5px 30px yellow;
+}
+
+.btn-outline-success{
+    box-shadow: 6px 5px 30px rgb(44, 99, 44);
+    background: greenyellow;
+    color: black;
 }
 
 h4{
-    background: rgb(238, 255, 0);
+    background: yellow;
     color: blue;
     margin: 5px;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-danger{
+    background: transparent;
+    text-shadow: 6px 5px 35px orange;
 }
 
 nav{
@@ -35,3 +47,36 @@ nav{
     padding: 20px;
 }
 
+.navbar-expand-lg{
+    box-shadow: 6px 10px 35px white;
+}
+
+.alert-dismissible{
+    color: black;
+}
+
+.tarjeta-body{
+    background-color: cornflowerblue;
+    padding: 20px;
+    width: 500px;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+}
+
+@media (min-width: 768px){/*@media para poder modificar tamaños y diseño de la pagina en las diferentes medidas*/
+    .tarjeta-body{
+        width: min(60rem, 100%);
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+    
+} 
+/*@media (min-width: 480px) Medida para un telefono
+/*@media (min-width: 768px) Medida para una talet
+/*@media (min-width: 1140px) Medida para una laptop o computadora
+/*@media (min-width: 1440px) Medida para una laptop o computadora mas grande
