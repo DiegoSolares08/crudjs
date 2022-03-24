@@ -12,7 +12,7 @@
     <title>CRUD</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"> Productos </a>
     </nav>
     <!--Navegación-->
@@ -21,6 +21,8 @@
     </nav>
     <br>
     <br>
+    <br>
+
 <center>
     <div class="contenedor">
         <!--Aplicación-->
@@ -29,7 +31,8 @@
             <div class="medida-1">
                 <div class="tarjeta">
                     <div class="tarjeta-header">
-                        <h4><b> Agregar Producto </b></h4>
+                        <h4><b class="text-danger"><img src="img/producto.jpg" alt=""> Agregar Producto </b></h4>
+                        <br>
                         <br>
                         <br>
                         <form id="producto-formulario" class="tarjeta-body">
@@ -45,12 +48,16 @@
                                 <input type="number" id="año" step="1" value="2022" class="control-formulario">
                             </div>
                             <br>
-                            <input type="submit" value="Guardar" class="btn btn-primario btn-bloque">
+                            <br>
+                            <input type="submit" value="Guardar" class="btn btn-outline-success">
 
                         </form>
+                        <br>
+                        
+                        <br>
+                        <br>
                     </div>
                 </div>
-
                 <!--Lista de productos-->
                 <div id="producto-lista" class="medida-3">
 
@@ -63,4 +70,3 @@
 
 </body>
 </html>
-
